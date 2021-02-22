@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template-1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        html,body{height: 100%;}
+        .div1-2{height: 100%;width: 100%;background-repeat: no-repeat;background-size:cover;transition: background  2s linear;background-image: url("https://images.hdqwalls.com/download/rainy-night-artistic-painting-1920x1080.jpg");}
+        .div1-1{height: 100%;width: 100%;background-repeat: no-repeat;background-size:cover;transition: background  2s linear;background-image: url("https://i.pinimg.com/originals/66/e4/ee/66e4eea36fd3d5e3d4c8d4cc42d5da2b.jpg");}
+        .div1-3{height: 100%;width: 100%;background-repeat: no-repeat;background-size:cover;transition: background  2s linear;background-image: url("https://images.hdqwalls.com/download/traffic-lights-4k-gh-1920x1080.jpg");}
+        .navbar-custom { 
+            background-color: rgba(0, 0, 0, 0.5); 
+        } 
+        .dAll{background-attachment: fixed;}
+    </style>
+</head>
+<body>
+    <nav class="navbar  navbar-expand-lg navbar-dark fixed-top navbar-custom">
+        <a class="navbar-brand" href="#">Green Sky</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div id="d1" class="div1-1 dAll" style="display:flex;justify-content: center;align-items: center;" >
+        <h1 data-aos="fade-up" data-aos-duration="3000" style="font-size:10vw;color: white;font-family: 'Lobster', cursive;" id="title">The Research Concel</h1>
+    </div>
+
+    <div style="background-color: 	rgb(32,32,32);height: 100%;width: 100%;padding: 5%; display: flex; justify-content: center; align-items: center;" >
+        <div class="row" data-aos="fade-down" data-aos-duration="3000">
+            <div class="col-md-5" style="color: white;">
+                <h1>Lorem ipsum dolor</h1><br>
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem enim ipsum numquam? Expedita libero temporibus laboriosam eum nihil nisi neque eos nemo, quia pariatur assumenda ullam animi qui necessitatibus ipsam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, corrupti nisi repellendus velit, voluptatum illum at atque amet error maiores iste labore possimus. Vero iure veniam necessitatibus voluptatem sunt facere!Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius exercitationem qui vero incidunt sint vel consectetur error quaerat porro laboriosam, eos reprehenderit magnam assumenda obcaecati sapiente, aspernatur doloremque dolorem veniam.
+            </div>
+            <div class="col-md-7" style=" min-height: 300px; border-radius: 5%; background-image: url('https://denielleemans.com/wp-content/uploads/2012/09/004_lorem.jpg');"></div>
+        </div>
+    </div>
+
+</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+    setInterval(function(){shiftIamge()}, 5000);
+    let i=1;
+    function shiftIamge(){
+        if(i==3){i=1}else{i=1+i}
+            $("#d1").addClass("div1-"+(i));
+            if(i==1){$("#d1").removeClass("div1-"+3);}
+            else{$("#d1").removeClass("div1-"+(i-1));}
+    }
+    
+  </script>
+</html>
